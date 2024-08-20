@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.parent {
+  background-color: olive;
+  /* width: 300px; */
+  /* width: 70%; */
+  /*  El valor por defecto de 'width' de un div,
+      como con cualquier otro elemento de bloque,
+      es 100% del elemento padre (en este caso:
+      el elemeno padre de .parent es body).  */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.child {
+  background-color: darkseagreen;
+  /*  Generalmente no incluiría un 'height'.
+      Sólo lo incorporo porque no tengo ningún
+      contenido dentro del div.  */
+  height: 250px;
+
+  /* width: 300px; */
+}
