@@ -339,6 +339,13 @@ As it says, the second one is the easier one to understand, just like we looked 
 
 [`box-sizing: border-box` (video)](https://youtu.be/WlGQdgy-M6w)
 
+### challenge-finished.zip
+
+[challenge-finished.zip]
+
+The code from my solution.
+
+
 ---
 ## Postdata
 

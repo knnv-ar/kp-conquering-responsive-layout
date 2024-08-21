@@ -30,37 +30,46 @@
 
 body {
   margin: 0;
+  font-size: 1.3125rem;
 }
 
-.hero {
+.section-hero {
+  padding: 8rem 4rem;
+  background-color: var(--color-bc);
+  color: var(--color-font);
+}
+
+.wrapper {
+  width: 80%;
   max-width: 1440px;
   margin: 0 auto;
-  background-color: var(--color-bc);
-  padding: 8rem 4rem;
 }
 
-.title {
-  font-size: 48px;
-  color: var(--color-font);
-  width: 50%;
+.hero__text {
+  width: 48%;
 }
 
-.content {
-  font-size: 21px;
-  color: var(--color-font);
+h1 {
+  font-size: 3rem;
+}
+
+p {
   line-height: 1.6;
-  width: 50%;
+}
+
+.section-hero p {
   margin-bottom: 4em;
 }
 
 .btn {
-  font-size: 21px;
-  text-transform: uppercase;
+  display: inline-block;
   text-decoration: none;
+  text-transform: uppercase;
   color: var(--color-bc);
-  padding: 1em 3em;
   background-color: var(--color-btn-bc);
-  border-radius: 2rem;
+  font-weight: 700;
+  padding: .75em 2.5em;
+  border-radius: 10rem;
 }
 
 .btn:hover,
