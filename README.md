@@ -44,20 +44,35 @@ It's very rare that I ever use height, and we'll see why in this lesson.
 
 Em vs rem - https://youtu.be/_-aDOAMmDHI
 
-#### Observaciones
+#### OBSERVACIONES
 
-La unidad 'rem' siempre tiene que ver con el tamaño de la tipografía en el elemento html{} o en su equivalente :root{}.
+  La unidad 'rem' siempre tiene que ver con el tamaño de la tipografía en el elemento html{} o en su equivalente `:root {...}`.
 
 Tanto 'rem' como 'em' suelen ser usados en padding, margin, width, height, 
 
 Si utilizamos la unidad 'em', font-size siempre buscar el tamaño de fuente del parent. Para padding y margin, siempre busca el tamaño de fuente de dicho elemento y no de su parent.
 
 Por lo tanto:
+
 - Se recomienda usar 'rem' para determinar el font-size.
 - Se recomienda usar 'rem' para determinar el margin así toma siempre referencia fija a 16px.
 - Se recomienda usar 'em' para determinar padding y margin ya que tiene sentido tomar su valor de acuerdo al tamaño de fuente (font-size) local.
 
 Para botones se suele usar: `padding: 1em 3em;`
+
+### About the challenges
+
+I'm about to issue you your first challenge!
+
+These challenges are for you, to help you reinforce what you are learning.
+
+If you'd like to submit your solution, or if ever you are stuck on a challenge, head on over to the Discord. There is a channel-specific to posting solutions, and you can ask people for feedback there too 😊.
+
+The early challenges aren't difficult, but they're important to do. One of the biggest issues people run into is running into tutorial hell. They watch tutorials, they understand them all, and then when they go to work on a project, they're stuck.
+
+So even if the challenge seems simple, go and do it! It won't take you long, and it'll reinforce what you're learning.
+
+As for submitting the challenges, once again, Discord is the best place to get feedback. There is no way to submit them directly to me. I'd love to be able to check them all, but with 10,000+ people taking this challenge, it's just not possible! Thanks for understanding 😊
 
 ### Challenge #1
 
@@ -96,6 +111,7 @@ Enjoy the course!
 There are no video lessons here today. These days are here to give you a chance to keep up if you fall behind, and also to provide some extra learning and resources for those who want to keep pushing.
 
 #### Relative units
+
 While you won't need to dive into relative units to get through this course, I do strongly suggest you learn how em and rem work, as they are essential in CSS today.
 
 I have a [YT video on em and rem units](https://youtu.be/_-aDOAMmDHI), if you aren't already familiar with them, or if you struggle to know which one to use.
@@ -112,11 +128,210 @@ If you see a challenge and say "that's too easy!" make sure you actually do it a
 
 ### CSS em and rem explained
 
-https://youtu.be/_-aDOAMmDHI
+[VIDEO](https://youtu.be/_-aDOAMmDHI)
 
 ### Why you shouldn't set font-sizes using em
 
-https://youtu.be/pautqDqa54I
+[VIDEO](https://youtu.be/pautqDqa54I)
+
+## Day 3 | Enter max-width
+
+### Challenge #1 - Solution
+
+[VIDEO]
+
+```css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  background: #23424a;
+  color: white;
+
+  width: 80%;
+  margin: 0 auto;
+
+  padding: 2em;
+}
+
+.intro-content {
+  width: 50%;
+}
+```
+
+### Adding in a max-width
+
+[VIDEO]
+
+As we saw, setting a fixed width on an element tends to be a bad idea. Instead we can use percentages, which make our lives easier.
+
+The only issue with this is, at large screens, things can get too big. Thankfully, we have max-width that can help us out!
+
+### Challenge #2
+
+[VIDEO]
+
+### Challenge #2 - Starting Files
+
+[challenge02.zip]
+
+### Some notes on the challenge
+
+You are allowed to modify anything I've provided, including the HTML.
+
+Also, I provided a little more than intended in the CSS, but in the next challenge I'm providing you with nothing at all as a starting point, so a little extra help in this one won't hurt 😅.
+
+## Day 4 | Extra curricular activities
+
+### Some extra material if you're interested
+
+Today is a catch-up day, so no official lessons.
+
+#### Extra-curricular
+
+If you are eager to dive keep learning though, there has been some talk about **viewport units** in the Discord server.
+
+Up next is a video where I take a look at them. **A word of warning though**, I do look at using them for font-size, and while cool, there are some accessibility issues with doing so, so I wouldn't suggest it unless it's just for a personal project of yours.
+
+This is totally optional, and while they can be useful, they will not be something I'll be diving into in this course.
+
+If you do like them and want to practice with them, there is no reason you can't incorporate them into future challenges though!
+
+### CSS Units: vh, vw, vmin, vmax
+
+[VIDEO](https://youtu.be/IWFqGsXxJ1E)
+
+## Day 5 | Practice time!
+
+### Challenge #2 - Solution
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01</title>
+ 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="section-one">
+        <div class="container">
+            <div class="section-one-content">
+                <h1>Lorem ipsum dolor sit.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aspernatur distinctio laudantium dolores. Nulla quibusdam reprehenderit eum sit minus aliquid!</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-two">
+        <div class="container">
+            <div class="section-two-content">
+                <h2>more content D:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, mollitia adipisci magnam voluptatibus repellendus fuga ut repellat exercitationem eaque amet, omnis aliquam fugiat laudantium id dicta at? Consectetur iure porro illum laudantium excepturi a laborum!</p>
+                <p>Sit magni soluta porro fugit placeat eius itaque, accusamus quisquam voluptates reiciendis pariatur, vitae molestiae. Minima, quos reprehenderit autem animi, nisi necessitatibus eligendi quis modi, facilis ipsam nihil odit quaerat! Nisi doloribus harum culpa ipsam!</p>
+                <p>Sint corporis animi repudiandae. Aliquid illum, tenetur magnam provident molestiae rem doloremque aspernatur quia reiciendis est facilis enim praesentium officia sequi qui debitis exercitationem quaerat hic quos recusandae. Architecto repudiandae aperiam tempora iste saepe error.</p>
+                <p>Provident aut suscipit aspernatur doloribus illum assumenda cupiditate perferendis dolores! Obcaecati omnis magnam ipsam voluptas ipsa eos explicabo quisquam architecto similique, sunt repellendus animi a doloribus ab deserunt. Dicta neque nostrum modi, illum debitis dolorem.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+```css
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.section-one {
+  background: #23424a;
+  color: white;
+  padding: 4rem 0;
+}
+
+.section-two {
+  background: white;
+  color: black;
+  padding: 2rem 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.section-one-content {
+  width: 50%;
+}
+
+.section-two-content {
+  /* border: 1px solid red; */
+}
+```
+
+### Challenge #3
+
+[VIDEO]
+
+[Click here](https://www.figma.com/file/dGPcL6Ym2avOt4736aHb2B/conquer-responsive-layout-week-1-final-challenge?node-id=0%3A1) to access the Figma file
+
+*There were some issues with the captions on this video so I've removed them while I get them fixed. Should be back up in mid-January
+
+### challenge-design-specs.pdf
+
+[challenge-design-specs.pdf]
+
+## Day 6 | Review
+
+### Review of the first week
+
+
+**In this first week, we've looked at:**
+
+- Using percentages for widths
+- Avoiding to set heights
+- Using max-width
+
+While there is nothing overly complicated with any of that, **being comfortable with these things is *the key* to mastering responsive layouts**.
+
+With a good understanding of the above, all we need is a little flexbox and we're going to start knocking even complex layouts out of the park!
+
+In this section of the course, you can find a few links to some extra reading that you can do if you're looking to continue learning a bit. They'll help supplement what we're covering here, but none of it is required reading 😊.
+
+**I'll be sharing my solution to the challenge tomorrow**. If you're a little bit behind at this point, you can use today and tomorrow to catch up a little.
+
+**Next week, we'll be jumping into flexbox** and how we can use it with what we've already learned to make our layouts. We'll be looking at both the macro-scale with a page's layout, as well as the more micro-scale in putting together a common navbar component.
+
+### Why you shouldn't use 'em's for font-size
+
+[VIDEO](https://youtu.be/pautqDqa54)
+
+### A Tale of width and max-width
+
+[Click here](https://css-tricks.com/tale-width-max-width/)
+
+An interesting look at the two properties, and how they might not always act the way you think they will. 
+
+As it says, the second one is the easier one to understand, just like we looked at, so I plan on sticking with that one 😊
+
+## Day 7 | Solution to challenge #3
+
+### My solution to challenge #3
+
+
 
 ---
 ## Postdata
