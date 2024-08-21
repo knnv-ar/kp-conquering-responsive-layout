@@ -1,44 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-
-
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 :root {
-  font-family: 'Roboto', sans-serif;
   --color-bc: #23424A;
   --color-font: white;
   --color-btn-font: #136C72;
   --color-btn-bc: #38CFD9;
 }
 
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
 body {
   margin: 0;
 }
 
-.wrapper {
+.hero {
   max-width: 1440px;
   margin: 0 auto;
   background-color: var(--color-bc);
   padding: 8rem 4rem;
-  
 }
 
 .title {
   font-size: 48px;
-  font-weight: 700;
   color: var(--color-font);
-  border: 1px solid red;
   width: 50%;
 }
 
 .content {
   font-size: 21px;
-  font-weight: 400;
   color: var(--color-font);
-  border: 1px solid red;
   line-height: 1.6;
   width: 50%;
   margin-bottom: 4em;
@@ -46,12 +55,15 @@ body {
 
 .btn {
   font-size: 21px;
-  font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-btn-font);
+  color: var(--color-bc);
   padding: 1em 3em;
   background-color: var(--color-btn-bc);
   border-radius: 2rem;
-  border: 1px solid red;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: .75;
 }

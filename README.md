@@ -331,7 +331,13 @@ As it says, the second one is the easier one to understand, just like we looked 
 
 ### My solution to challenge #3
 
+[VIDEO]
 
+[Emmet documentation](https://docs.emmet.io/)
+
+[Why I use the BEM naming convention for my CSS (video)](https://youtu.be/SLjHSVwXYq4)
+
+[`box-sizing: border-box` (video)](https://youtu.be/WlGQdgy-M6w)
 
 ---
 ## Postdata
