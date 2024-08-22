@@ -345,6 +345,55 @@ As it says, the second one is the easier one to understand, just like we looked 
 
 The code from my solution.
 
+## Day 8 | Flexbox Basics
+
+### Flexbox basics
+
+Flexbox was the first actual layout property given to us in CSS, which is wild because it was only added relatively recently.
+
+This part of the course isn't a complete overview of flexbox, but more of a look at how we can quickly and easily use it to start making more interesting looking layouts.
+
+We'll be starting with some simple columns setups, plus a nice trick to space things out. In the coming days, we'll be diving deeper in and making more fleshed out layouts.
+
+Flexbox does do a few strange things, which we'll be exploring as well.
+
+For the challenge, I've provided the design specs as a PDF. I've also provided the starting files both as a download to work locally on your computer, as well as a Codepen. Pick whichever you'd prefer 😊
+
+### An introduction to flexbox
+
+[VIDEO]
+
+### Adding space in between columns
+
+[VIDEO]
+
+Hoy en día se puede realizar de forma sencilla con la propiedad `gap` en el contenedor flex.
+
+Antes de la existencia de `gap` se utilizaba combinadores CSS. En el siguiente ejemplo vemos la utilización de un selector de elementos hermanos adyacentes `+` :
+
+```css
+.col + .col {
+  margin-left: 1rem;
+}
+```
+
+### Flexbox challenge #1
+
+[VIDEO]
+
+### Flexbox challenge #1 - Design Specs
+
+[02-03-challenge-layout.pdf]
+
+### Flexbox challenge #1 - starting files | HTML & CSS Files
+
+[challenge-start.zip]
+
+### Flexbox challenge #1 - starting files | Codepen
+
+I've [created a CodePen of the challenge starting files](https://codepen.io/kevinpowell/pen/ZEbpGjE?editors=1100) as well. If you'd prefer, you can simply fork this and work from here instead of locally on your computer.
+
+
 
 ---
 ## Postdata
