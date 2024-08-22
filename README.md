@@ -393,7 +393,180 @@ Antes de la existencia de `gap` se utilizaba combinadores CSS. En el siguiente e
 
 I've [created a CodePen of the challenge starting files](https://codepen.io/kevinpowell/pen/ZEbpGjE?editors=1100) as well. If you'd prefer, you can simply fork this and work from here instead of locally on your computer.
 
+#### FINISHED CODE
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="section-hero">
+    <div class="wrapper">
+      <div class="hero__text">
+        <h1 class="title roboto-black">Responsive layouts don’t have to be a struggle</h1>
+        <p class="content roboto-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <a class="btn roboto-bold " href="#">I want to learn</a>
+      </div>
+    </div>
+  </div>
+  <section class="three-col">
+    <div class="wrapper">
+      <div class="row">
+        <div class="col">
+          <h2>Cheap</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+        <div class="col">
+          <h2>Quick</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+        <div class="col">
+          <h2>Affordable</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+      </div>
+    </div>
+</section>
+  <section class="two-col">
+    <div class="wrapper">
+      <div class="row">
+        <div class="col">
+          <h2>Cheap</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+        <div class="col">
+          <h2>Quick</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+      </div>
+    </div>
+</section>
+</body>
+</html>
+```
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bc: #23424A;
+  --color-font: white;
+  --color-btn-font: #136C72;
+  --color-btn-bc: #38CFD9;
+  --color-violet: #87629A;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-size: 1.3125rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-hero {
+  padding: 8rem 0;
+  background-color: var(--color-bc);
+  color: var(--color-font);
+}
+
+.wrapper {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__text {
+  width: 48%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.section-hero p {
+  margin-bottom: 4em;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-bc);
+  background-color: var(--color-btn-bc);
+  font-weight: 700;
+  padding: .75em 2.5em;
+  border-radius: 10rem;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: .75;
+}
+
+.row {
+  /* display: flex; => flex container (parent) */
+  display: flex;
+
+  /* flex-direction: row; => row is the default */
+  flex-direction: row;
+  
+  /* adds a gap between flex items */
+  gap: 3em;
+}
+
+.col {
+  /* this are now flex items (child) */
+  width: 100%;
+  /* background-color: #136C72; */
+}
+
+.three-col {
+  text-align: center;
+  padding: 3em 0;
+}
+
+.three-col h2 {
+  color: var(--color-violet);
+}
+
+.two-col {
+  background-color: var(--color-btn-font);
+  color: var(--color-font);
+  text-align: center;
+  padding: 3em 0;
+}
+```
 
 ---
 ## Postdata

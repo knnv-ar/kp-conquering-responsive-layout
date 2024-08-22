@@ -45,7 +45,6 @@ body {
   width: 80%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 4rem 0;
 }
 
 .hero__text {
@@ -88,7 +87,7 @@ p {
   flex-direction: row;
   
   /* adds a gap between flex items */
-  gap: 2rem;
+  gap: 3em;
 }
 
 .col {
@@ -97,22 +96,18 @@ p {
   /* background-color: #136C72; */
 }
 
-.wrapper .col h2 {
+.three-col {
+  text-align: center;
+  padding: 3em 0;
+}
+
+.three-col h2 {
   color: var(--color-violet);
-  text-align: center;
 }
 
-.wrapper .col p {
-  text-align: center;
-}
-
-.section-footer {
+.two-col {
   background-color: var(--color-btn-font);
-  /* color: var(--color-font); */
+  color: var(--color-font);
   text-align: center;
-  color: var(--color-font);
-}
-
-.section-footer .col h2 {
-  color: var(--color-font);
+  padding: 3em 0;
 }
