@@ -568,6 +568,15 @@ p {
 }
 ```
 
+##### FUNCTION OF CLASSES:
+
+| Class name | Function |
+|------------|----------|
+| `sections` | I define `padding` and `background-color`. |
+| `wrapper` | It holds the content in the middle of a page with `width: 80%` and `max-width: 1440`. |
+| `row` | It creates a `display: flex;`, `flex-direction` and `gap`. |
+| `col` | It holds the content. |
+
 ---
 ## Postdata
 
