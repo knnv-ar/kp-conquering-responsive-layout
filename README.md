@@ -577,6 +577,347 @@ p {
 | `row` | It creates a `display: flex;`, `flex-direction` and `gap`. |
 | `col` | It holds the content. |
 
+## Day 9 | A deeper dive into flexbox
+
+### My Solution to Flexbox challenge #1
+
+[view yesterday's finished code]
+
+### Reducing the amount of HTML needed 
+
+#### OPTIMIZED CODE
+
+```html
+  <section class="three-col">
+    <div class="wrapper row">
+        <div class="col">
+          <h2>Cheap</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+        <div class="col">
+          <h2>Quick</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+        <div class="col">
+          <h2>Affordable</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+    </div>
+</section>
+
+  <section class="two-col">
+    <div class="wrapper row">
+        <div class="col">
+          <h2>Cheap</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+        <div class="col">
+          <h2>Quick</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, expedita? Natus nesciunt aperiam saepe eum, dolores deleniti quasi iusto necessitatibus possimus facere laboriosam fugiat.</p>
+        </div>
+    </div>
+</section>
+```
+
+We eliminate the `div.row` and we add it in the `div.wrapper` as `wrapper row` in both sections.
+
+### Adding a hero image 
+
+[VIDEO]
+
+We have two methods:
+
+1. The `div` one:
+
+```html
+<div class="section-hero">
+    <div class="wrapper row">
+      <div class="hero__text">
+        <h1 class="title roboto-black">Responsive layouts don’t have to be a struggle</h1>
+        <p class="content roboto-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <a class="btn roboto-bold " href="#">I want to learn</a>
+      </div>
+
+      <div>
+        <img src="hero-image-320.jpg" alt="great image">
+      </div>
+
+    </div>
+  </div>
+```
+
+```css
+/* nothing at all*/
+```
+
+2. The **loose** one (without `div`):
+
+```html
+<div class="section-hero">
+  <div class="wrapper row">
+
+    <div class="hero__text">
+      <h1 class="title roboto-black">Responsive layouts don’t have to be a struggle</h1>
+      <p class="content roboto-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <a class="btn roboto-bold " href="#">I want to learn</a>
+    </div>
+    
+    <img class="hero__img" src="hero-image-320.jpg" alt="great image">
+    
+  </div>
+</div>
+```
+
+```css
+.hero__img {
+  align-self: flex-start; /* this must be added so the img maintains its aspect ratio */
+}
+```
+
+### Column widths and flexbox 
+
+[VIDEO]
+
+Some fixes to add:
+
+1. Set the widths (in %) of the two columns (text: 60% and image: 30%, leaving a 10% for a gap):
+
+```html
+<div class="section-hero">
+  <div class="wrapper row">
+
+    <div class="hero__text">
+      <h1 class="title roboto-black">Responsive layouts don’t have to be a struggle</h1>
+      <p class="content roboto-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+      <a class="btn roboto-bold " href="#">I want to learn</a>
+    </div>
+    
+    <img class="hero__img" src="hero-image-320.jpg" alt="great image">
+    
+  </div>
+</div>
+```
+
+```css
+.hero__text {
+  width: 60%; /* text space percentage */
+}
+
+.hero__img {
+  align-self: flex-start;
+  width: 30%; /* img space percentage */
+}
+```
+
+2. Add the remaining percentage as a gap in `row`:
+
+```css
+.row {
+  display: flex;
+
+  flex-direction: row;
+  
+  justify-content: space-between; /* adds a gap between flex items */
+
+  gap: 3em;
+}
+```
+
+3. Align `h1` with `img`:
+
+```css
+.h1 {
+  font-size: 3rem;
+  margin-top: 0; /* eliminate top margin */
+}
+```
+
+### Ensuring the image is responsive 
+
+[VIDEO]
+
+Allways add the folliwing rule so to ensure images are responsive:
+
+```css
+img {
+  max-width: 100%;
+}
+```
+
+### Flebox challenge #2 
+
+[VIDEO]
+
+### Flexbox challenge #2 - Design Specs 
+
+[02-05-challenge.pdf]
+
+
+### Flexbox challenge #2 - starting files... 
+
+[02-6-challenge-2.zip]
+
+### Flexbox challenge #2 - starting CodePen 
+
+https://codepen.io/kevinpowell/pen/NWGRELP
+
+#### FINISHED CODE:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquering Rsponsive Layouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="container row">
+            <div class="hero__text">
+                <h1>Responsive layouts don’t have to be a struggle</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a href="#" class="btn">I want to learn</a>
+            </div>
+            <img class="hero__img" src="./img/hero-img.jpg" alt="hero image">
+        </div>
+    </div> 
+
+    <div class="section-middle">
+        <div class="container row">
+            <div class="section-two__text">
+                <h2>Quality designs made custom, on demand, just for you</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+            <div class="section-three__text">
+                <h2>Cheap</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        
+                <h2>Quick</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        
+                <h2>Quality</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+</body>
+</html>
+```
+
+```css
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+h2 {
+    /* font-size: 2.25rem; */
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    justify-content: space-between;
+    
+    /* can't use yet */
+    /* gap: 100px; */
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 60%;
+}
+
+.hero__img {
+    width: 35%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.section-two__text {
+    padding: 2rem 0;
+    width: 60%;
+    margin: 2em 0;
+}
+
+.section-two__text h2 {
+    color: #136C72;
+}
+
+.section-three__text {
+    background-color: #136C72;
+    color: #FFF;
+    padding: 2rem;
+    width: 35%;
+    text-align: center;
+    margin: 2em 0;
+}
+
+.section-three__text p {
+    margin-bottom: 4em
+}
+```
 ---
 ## Postdata
 
@@ -606,6 +947,13 @@ mpeg ts
 video.ts to mp4
 
 ---
+
+## Placeholder image generator
+
+https://picsum.photos/320/240
+
+---
+
 ## The 140 HTML Color Names
 
 Basado en https://htmlcolorcodes.com/color-names/
