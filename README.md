@@ -918,6 +918,396 @@ h2 {
     margin-bottom: 4em
 }
 ```
+
+## Day 10 | Extra curricular activities
+
+### A deeper dive into flexbox
+
+Yesterday was a big day, so there is no shame in taking a break at this point!
+
+If you're loving flexbox (or perhaps still a little confused by it!), I do have a 3-part series on YouTube that goes much deeper than we've looked so far, and could help you grasp it.
+
+You can find it here: https://www.youtube.com/playlist?list=PL4-IK0AVhVjMSb9c06AjRlTpvxL3otpUd
+
+You won't need this to complete any of the challenges in the course and a lot of it will be covered in the coming days, but if you really want some more material today, really understanding flexbox is a good place to start. 
+
+## Day 11 | Using flexbox for a navigation
+
+### Flexbox challenge #2 - Solution
+
+[VIDEO]
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquering Rsponsive Layouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container row">
+            <div class="hero__text">
+                <h1>Responsive layouts don’t have to be a struggle</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a href="#" class="btn">I want to learn</a>
+            </div>
+            <img class="hero__img" src="./img/hero-img.jpg" alt="interesting sketch image">
+        </div>
+    </header> 
+    <main class="main container row">
+            <section class="primary-content">
+                <h2 class="section-title">Quality designs made custom, on demand, just for you</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </section>
+            <aside class="sidebar">
+                <h2 class="sidebar-title">Cheap</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            
+                    <h2 class="sidebar-title">Quick</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            
+                    <h2 class="sidebar-title">Quality</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </aside>
+    </main>
+    
+
+</body>
+</html>
+```
+
+```css
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+1. Refer to the design specs for the
+   overall layout 
+2. The image should line up with
+   the sidebar in the section
+   below
+
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #136C72;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    /* display: flex => flex container */
+    display: flex;
+    justify-content: space-between;
+    
+    /* can't use yet */
+    /* gap: 100px; */
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text,
+.primary-content { 
+    width: 62%;
+}
+
+.hero__img,
+.sidebar {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+.primary-content {
+    padding-top: 1em;
+}
+
+.sidebar {
+    color: #FFF;
+    background-color: #136C72;
+    text-align: center;
+    padding: 1em;
+}
+```
+### Flexbox Challenge #3
+
+[VIDEO]
+
+### Flexbox challenge #3 - starting files | HTML & CSS files
+
+[nav-challenge.zip]
+
+### Flexbox challenge #3 - starting files | Codepen
+
+https://codepen.io/kevinpowell/pen/dyYNWXb
+
+### Flexbox challenge #3 - Solution
+
+[VIDEO]
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquering Responsive Layouts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="nav container">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container row">
+            <div class="hero__text">
+                <h1>Responsive layouts don’t have to be a struggle</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <a href="#" class="btn">I want to learn</a>
+            </div>
+            <img src="img/hero-img.jpg" alt="UX design sketches" class="hero__img">
+        </div>
+    </section> 
+
+    <main class="main container row">
+            <section class="primary-content">
+                <h2 class="section-title">Quality designs made custom, on demand, just for you</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </section>
+            <aside class="sidebar">
+                <h2 class="sidebar-title">Cheap</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+                <h2 class="sidebar-title">Quick</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+
+                <h2 class="sidebar-title">Quality</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </aside>
+    </main>
+    
+</body>
+</html>
+```
+
+```css
+/* 
+////// For this challenge ///////
+
+- All text is in the text.md file
+
+// Requirements
+   1. Get all the navigation items next to one another
+   2. Add a space between all the items
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+.col + .col {
+    margin-left: 30px;
+}
+
+
+header {
+    background: #136c72;
+    padding: 1em 0;
+}
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+}
+
+.nav__item {
+    margin-right: 1em;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;;
+}
+
+.nav__link--button {
+    background: #fff;
+    color: #136c72;
+    padding: .25em 1em;
+    border-radius: 10em;
+}
+
+.nav__link:hover {
+    opacity: .75;
+}
+
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+.primary-content {
+    width: 62%;
+}
+
+.sidebar {
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
+}
+```
+
 ---
 ## Postdata
 
