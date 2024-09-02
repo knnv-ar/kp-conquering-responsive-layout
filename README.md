@@ -1308,6 +1308,461 @@ header {
 }
 ```
 
+## Day 12 | Getting fancy with navigations
+
+### Fancier up our navigation with flexbox
+
+[VIDEO]
+
+We have two ways to do it:
+
+1. without modifying `html` and using `marging-left`:
+
+```html
+<header>
+        <nav class="nav container">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                <li class="nav__item nav__iten--push-right"><a href="#" class="nav__link">Sign In</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+```
+
+```css
+.nav__iten--push-right {
+  margin-left: auto;
+} 
+```
+
+2. modifying `html`:
+
+```html
+<header>
+    <nav class="nav container">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+            <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+        </ul>
+    </nav>
+  </header>
+```
+
+```css
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__item + .nav__item {
+    margin-left: 1em;
+}
+```
+
+### The logo
+
+[logo.svg]
+
+I'll be using this logo in the next few examples if you want to follow along.
+
+```html
+<header>
+    <div class="container row">
+        <a class="logo" href="#" >
+            <img src="./img/logo.svg" alt="conquering responsive layout">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            </ul>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+```
+
+```css
+.logo {
+    margin-right: 1em;
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid red;
+}
+```
+
+### More improvements to the navigation
+
+[VIDEO]
+
+```html
+<header>
+    <div class="container row">
+        <a class="logo" href="#" >
+            <img src="./img/logo.svg" alt="conquering responsive layout">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            </ul>
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+```
+
+```css
+.logo {
+    margin-right: 1em;
+    display: inline-flex;
+}
+
+.nav {
+    display: flex;
+    flex-grow: 1; /* it take total width */
+    justify-content: space-between;
+    align-items: center;
+}
+```
+
+### Centering things the easy way
+
+[VIDEO]
+
+Lets add the following classes: `nav__list--primary` and `nav__list--secondary`.
+
+```html
+<header>
+    <div class="container row">
+        <a class="logo" href="#" >
+            <img src="./img/logo.svg" alt="conquering responsive layout">
+        </a>
+        <nav class="nav">
+            <ul class="nav__list nav__list--primary">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            </ul>
+            <ul class="nav__list nav__list--secondary">
+                <li class="nav__item"><a href="#" class="nav__link">Sign In</a></li>
+                <li class="nav__item"><a href="#" class="nav__link nav__link--button">Sign up</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+```
+
+```css
+.nav__list--primary {
+    margin: 0 auto;
+}
+```
+### Flexbox challenge #4
+
+[VIDEO]
+
+### Flexbox Challenge #4 - Design Specs and Images
+
+[flexbox-challenge-4.zip]
+
+#### FINISHED CODE:
+
+```html
+```
+
+```css
+```
+
+## Day 13/14
+
+### Break time!
+
+**There are no new lessons or content this weekend.** We've covered a lot over the last 2-weeks, and while I might be sounding like a broken record at this point, it's important to have some down-time. It also gives people who are a little behind a chance to catch-up a little 😊.
+
+So if you're in catch-up mode, take your time over this weekend to do so, and if you're all caught up, or maybe just working on the challenge, that's great!
+
+**We'll be back at it on Monday when we start looking at media queries.**
+
+**If you're insistent on finding something new to learn about**, over on YouTube I have [a video that takes a look at some relatively new CSS functions](https://youtu.be/U9VF-4euyRo):
+- `min()`
+- `max()`
+- and `clamp()`
+
+They are some exciting functions that we can use as for the values of elements, so we could set something like `width: min(95%, 1200px);`, which would be the same as setting both a width and a max-width.
+
+And while setting a width and max-width is something we could already do, we can also use this for things like margin and padding (and font sizes!), where something like that wasn't even possible before.
+
+`clamp()` is even more exciting in how we could use it for responsive typography.
+
+I'm still scratching the surface with these, and browser support for them (especially `clamp()`) isn't perfect yet, but they open up some exciting possibilities for creating responsive websites!
+
+#### Initial settings for min():
+
+```css
+.content {
+  /*
+  the following line
+  is equivalent to:
+    width: 80%;
+    max-width: 500px;
+  */
+	width: min(600px, 80%);
+}
+```
+
+#### Initial settings for clamp():
+
+```css
+.title {
+	font-size: clamp(2rem, 5vw, 5rem);
+}
+
+.p {
+	font-size: clamp(1rem, 1.25vw, 1.25rem);
+}
+```
+
+## Day 15
+
+### Media query basics
+
+[VIDEO]
+
+There are `media-type` and `media-feature`. We'll cover the basics of `media-feature` in this section.
+
+```css
+/* 600px or bigger */
+@media (min-width: 600px) {
+
+}
+
+/* 600px or smaller */
+@media (max-width: 600px) {
+
+}
+```
+
+We can combine these together to create complex queries like `min-width: 600px; max-width: 900px;`:
+
+```css
+/* between 600px and 900px */
+@media (min-width: 600px) and (max-width: 900px) {
+
+}
+```
+
+For instance, what is included in `.example` is for desktop-first design while what's included in media queries is for the small screen (mobile version):
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="example"></div>
+</body>
+</html>
+```
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.body {
+ margin: 0;
+ font-family: 'Roboto', sans-serif;
+ font-size: 1.3rem;
+}
+
+.example {
+  width: 90%;
+  margin: 5em auto;
+  padding: 10em 0;
+  background-color: steelblue;
+}
+
+/* the following is considered desktop-first:*/
+
+/* from 0px to a max of 600px: */
+@media (max-width: 600px) {
+  .example {
+    background-color: olivedrab;
+  }
+}
+```
+
+But, if we want to go mobile-first, we can do that too:
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.body {
+ margin: 0;
+ font-family: 'Roboto', sans-serif;
+ font-size: 1.3rem;
+}
+
+.example {
+  width: 90%;
+  margin: 5em auto;
+  padding: 10em 0;
+  background-color: steelblue;
+}
+
+/* the following is considered mobile-first:*/
+
+/* from a min of 600px and up: */
+@media (min-width: 600px) {
+  .example {
+    background-color: olivedrab;
+  }
+}
+```
+
+Let's see and example with three different media queries: small (steelblue), medium (olivedrab), and large (orangered) screen with a mobile-first approach:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="example"></div>
+</body>
+</html>
+```
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.body {
+ margin: 0;
+ font-family: 'Roboto', sans-serif;
+ font-size: 1.3rem;
+}
+
+.example {
+  width: 90%;
+  margin: 5em auto;
+  padding: 10em 0;
+  background-color: steelblue;
+}
+
+/* from a min of 600px and up: */
+/* always keep the media queries in order, from smallest to biggest */
+@media (min-width: 600px) {
+  .example {
+    background-color: olivedrab;
+  }
+}
+
+/* from a min of 800px and up: */
+/* always keep the media queries in order, from smallest to biggest */
+@media (min-width: 800px) {
+  .example {
+    background-color: orangered;
+  }
+}
+```
+
+### Adding one to our layout
+
+[VIDEO]
+
+We'll add a media query to our layout. The approach we'll be desktop-first.
+
+```css
+@media (max-width: 600px) {
+    .row {
+        display: block;
+    }
+
+    .hero__text, .hero__img, .primary-content, .sidebar {
+        width: 100%;
+    }
+
+    .hero__img {
+        margin-top: 2em;
+    }
+}   
+```
+
+## Day 16 | What breakpoints to use?
+
+### How do decide what breakpoints to use?
+
+[VIDEO]
+
+### The 100% correct way to do CSS breakpoints
+
+https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
+
+A dive into how to pick breakpoints for your projects. I still maintain that the design should dictate the ones you're using, but as I said at the end of my video, I end up very often using the same, or very similar ones, almost all the time.
+
+The tl;dr of the article: Use 600px, 900px, 1200px, and 1800px if you plan on giving the giant-monitor people something special.
+
+#### Tip #1: Get your breakpoints right
+
+So what are the right breakpoints?
+```
+phone: 0px,
+tablet portrait: 600px,
+tablet landscape: 900px,
+desktop: 1200px, and
+big desktop: 1800px
+```
+
+## Day 17 | The viewport meta tag
+
+### The meta viewport tag
+
+[VIDEO]
+
+The following line ensures that the website will be responsive the way you want it to be.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+> **IMPORTANT**: don't forget to include it in the code!
+
+
+
 ---
 ## Postdata
 
