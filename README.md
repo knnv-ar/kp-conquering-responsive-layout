@@ -1487,12 +1487,21 @@ Lets add the following classes: `nav__list--primary` and `nav__list--secondary`.
 
 [flexbox-challenge-4.zip]
 
-#### FINISHED CODE:
-
-```html
 ```
+Lorem ipsum sit
+Responsive layouts don’t have to be a struggle
 
-```css
+Quality Designs
+Felis donec et odio pellentesque diam volutpat. Aliquam purus sit amet luctus venenatis. Turpis in eu mi bibendum neque egestas congue quisque egestas. Pellentesque sit amet porttitor eget dolor morbi non.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut tristique. Arcu dui vivamus arcu felis. Sociis natoque penatibus et magnis dis.
+
+Made custom for you
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+image-01.jpg
+
+image-02.jpg
+Created with care
+Felis donec et odio pellentesque diam volutpat. Aliquam purus sit amet luctus venenatis. Turpis in eu mi bibendum neque egestas congue quisque egestas. Pellentesque sit amet porttitor eget dolor morbi non.
 ```
 
 ## Day 13/14
@@ -1761,7 +1770,322 @@ The following line ensures that the website will be responsive the way you want 
 
 > **IMPORTANT**: don't forget to include it in the code!
 
+## Day 18 | Challenge solution & Mobile-first
 
+### Flexbox Challenge #4 solution - Writing the HTML
+
+[VIDEO]
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="intro">
+      <div class="container">
+        <p class="intro__text">Lorem ipsum sit</p>
+        <h1 class="intro__title">Responsive layouts don’t<br> have to be a struggle</h1>
+      </div>
+    </section>
+    <section class="section-two">
+      <div class="container">
+      <h2 class="section-title section-title--dark">Quality Designs</h2>
+        <div class="row">
+          <div class="col">
+            <p>Felis donec et odio pellentesque diam volutpat. Aliquam purus sit amet luctus venenatis. Turpis in eu mi bibendum neque egestas congue quisque egestas. Pellentesque sit amet porttitor eget dolor morbi non.</p>
+          </div>
+          <div class="col">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui vivamus arcu felis bibendum ut tristique. Arcu dui vivamus arcu felis. Sociis natoque penatibus et magnis dis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-three">
+      <div class="container row">
+        <div class="col">
+          <h2 class="section-title">Made custom for you</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        </div>
+        <div class="col">
+          <img src="./img/image-01.jpg" alt="beautiful image">
+        </div>
+      </div>
+    </section>
+    <section class="section-four">
+      <div class="container row">
+        <div class="col">
+          <img src="./img/image-02.jpg" alt="incredible image">
+        </div>
+        <div class="col">
+          <h2 class="section-title">Created with care</h2>
+          <p>Felis donec et odio pellentesque diam volutpat. Aliquam purus sit amet luctus venenatis. Turpis in eu mi bibendum neque egestas congue quisque egestas. Pellentesque sit amet porttitor eget dolor morbi non.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+```
+
+### html-finished.zip
+
+[html-finished.zip]
+
+### Flexbox Challenge #4 solution - Writing mobile-first CSS
+
+[VIDEO]
+
+CSS custom properties: https://youtu.be/PHO6TBq_auI
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Tipografías cuerpos*/
+  --fnt-playfair: 'Playfair Display', serif;
+  --fnt-roboto: 'Roboto', sans-serif;
+
+  /* Tipografías tamanios*/
+  --fnt-18px: 1.125rem;
+  --fnt-21px: 1.3125rem;
+  --fnt-36px: 2.25rem;
+  --fnt-48px: 3rem;
+  --fnt-60px: 3.75rem;
+  
+  /* Tipografías Playfair Display */
+  --font-playfair-display: 'Playfair Display', serif;
+
+  /* Colores */
+  --clr-white: #FFF;
+  --clr-sand: #F3EED9;
+  --clr-coffee: #824936;
+  --clr-dark-grey: #222C2A;
+  
+}
+
+body {
+  margin: 0;
+  font-family: var(--fnt-roboto);
+  font-size: var(--fnt-21px);
+  line-height: 1.6;
+  color: var(--clr-dark-grey);
+}
+
+img {
+  max-width: 100%;
+  clip-path: inset(1px);
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-family: var(--fnt-playfair);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+section {
+  padding: 4em 0;
+}
+
+.container {
+  width: 84%;
+  margin: 0 auto;
+  max-width: 1128px;
+}
+
+.section-title {
+  color: var(--clr-sand);
+  font-size: var(--fnt-36px);
+}
+
+.section-title--dark {
+  color: var(--clr-coffee);
+}
+
+.section-two {
+  background-color: var(--clr-white);
+}
+
+.section-three {
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-white);
+}
+
+.section-four {
+  background-color: var(--clr-coffee);
+  color: var(--clr-white);
+}
+
+.intro {
+  background-color: var(--clr-sand);
+  text-align: center;
+}
+
+.intro__text {
+  color: var(--clr-dark-grey);
+  font-size: var(--fnt-18px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: .6em;
+  text-transform: uppercase;
+  margin: 0 0 .25em;
+}
+
+.intro__title {
+  color: var(--clr-coffee);
+  font-size: var(--fnt-48px);
+}
+```
+
+### Flexbox Challenge #4 solution - Adding media queries for larger screens
+
+[VIDEO]
+
+```css
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Tipografías cuerpos*/
+  --fnt-playfair: 'Playfair Display', serif;
+  --fnt-roboto: 'Roboto', sans-serif;
+
+  /* Tipografías tamanios*/
+  --fnt-18px: 1.125rem;
+  --fnt-21px: 1.3125rem;
+  --fnt-36px: 2.25rem;
+  --fnt-48px: 3rem;
+  --fnt-60px: 3.75rem;
+  
+  /* Tipografías Playfair Display */
+  --font-playfair-display: 'Playfair Display', serif;
+
+  /* Colores */
+  --clr-white: #FFF;
+  --clr-sand: #F3EED9;
+  --clr-coffee: #824936;
+  --clr-dark-grey: #222C2A;
+  
+}
+
+/* General styles */
+
+body {
+  margin: 0;
+  font-family: var(--fnt-roboto);
+  font-size: var(--fnt-21px);
+  line-height: 1.6;
+  color: var(--clr-dark-grey);
+}
+
+img {
+  max-width: 100%;
+  clip-path: inset(2px);
+}
+
+h1, h2 {
+  margin-top: 0;
+  font-family: var(--fnt-playfair);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+section {
+  padding: 4em 0;
+}
+
+/* Specific styles */
+
+.container {
+  width: 84%;
+  margin: 0 auto;
+  max-width: 1128px;
+}
+
+.section-title {
+  color: var(--clr-sand);
+  font-size: var(--fnt-36px);
+}
+
+.section-title--dark {
+  color: var(--clr-coffee);
+}
+
+.section-two {
+  background-color: var(--clr-white);
+}
+
+.section-three {
+  background-color: var(--clr-dark-grey);
+  color: var(--clr-white);
+}
+
+.section-four {
+  background-color: var(--clr-coffee);
+  color: var(--clr-white);
+}
+
+.intro {
+  background-color: var(--clr-sand);
+  text-align: center;
+}
+
+.intro__text {
+  color: var(--clr-dark-grey);
+  font-size: var(--fnt-18px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: .6em;
+  text-transform: uppercase;
+  margin: 0 0 .25em;
+}
+
+.intro__title {
+  color: var(--clr-coffee);
+  font-size: var(--fnt-48px);
+}
+
+/* Media queries */
+
+@media (min-width: 900px) {
+  .row {
+    display: flex;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .col + .col {
+    margin-left: 3em;
+  }
+
+  .intro__title {
+    font-size: var(--fnt-60px);
+  }
+}
+```
+### Flexbox Challenge #4 solution - A look at min-height
+
+[VIDEO]
+
+https://youtu.be/IWFqGsXxJ1E
+
+### flexbox-challenge-4-finished.zip
+
+[finished.zip]
 
 ---
 ## Postdata
