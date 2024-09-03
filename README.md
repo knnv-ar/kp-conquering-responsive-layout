@@ -2087,6 +2087,25 @@ https://youtu.be/IWFqGsXxJ1E
 
 [finished.zip]
 
+## Day 19 | Mobile navigation challenge
+
+
+### Navigation Challenge
+
+[VIDEO]
+
+### Navigation Challenge - layouts
+
+[navigation-challenges.pdf]
+
+### nav-challenge.zip
+
+[nav-challenge.zip]
+
+### Navigation Challenge | Starting Codepen 
+
+https://codepen.io/kevinpowell/pen/zYvEKJx
+
 ---
 ## Postdata
 
