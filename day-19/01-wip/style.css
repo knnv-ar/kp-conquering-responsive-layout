@@ -123,6 +123,7 @@ header {
     visibility: hidden;
     height: 0;
     position: absolute;
+    font-size: 1rem;
 }
 
 .nav--visible {
@@ -133,29 +134,36 @@ header {
 
 .nav__list {
     margin: 0;
-    padding: 2em;
+    padding: 0;
     list-style: none;
 }
 
+.nav__list--primary {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .nav__item {
-    padding: .5em;
+    margin-top: 1em;
 }
 .nav__link {
     color: #fff;
     text-decoration: none;
-    text-transform: uppercase;;
+    text-transform: uppercase;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    opacity: .65;
 }
 
 .nav__link--button {
+    padding: .25em .75em;
     background: #fff;
     color: #136c72;
-    padding: .25em 1em;
     border-radius: 10em;
 }
 
-.nav__link:hover {
-    opacity: .75;
-}
 
 .logo {
     height: 30px;
@@ -201,49 +209,28 @@ header {
     .nav {
         visibility: visible;
         display: flex;
-        height: auto;
-
-        flex-grow: 1;
-        justify-content: space-between;
         align-items: center;
-
-        border: 1px solid red;
+        height: auto;
+        position: relative;
     }
-
 
     .nav__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    
         display: flex;
+        margin: 0;
     }
-        
+    
+    .nav__item {
+        margin: 0;
+    }
+    
     .nav__list--primary {
         margin: 0 auto;
     }
-    
-    .nav__item + .nav__item {
-        margin-left: 1em;
-    }
-    
-    .nav__link {
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;;
-    }
-    
-    .nav__link--button {
-        background: #fff;
-        color: #136c72;
-        padding: .25em 1em;
-        border-radius: 10em;
-    }
-    
-    .nav__link:hover {
-        opacity: .75;
-    }
 
+    .nav__item {
+        margin: 0 0 0 1.5em
+    }
+    
     .row {
         display: flex;
         justify-content: space-between;
@@ -270,45 +257,3 @@ header {
     
     
 }
-
-/*
-.nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nav__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    display: flex;
-}
-
-.nav__list--primary {
-    margin: 0 auto;
-}
-
-.nav__item + .nav__item {
-    margin-left: 1em;
-}
-
-.nav__link {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;;
-}
-
-.nav__link--button {
-    background: #fff;
-    color: #136c72;
-    padding: .25em 1em;
-    border-radius: 10em;
-}
-
-.nav__link:hover {
-    opacity: .75;
-}
-*/
