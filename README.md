@@ -2215,7 +2215,81 @@ https://codepen.io/kevinpowell/pen/zYvEKJx
 }
 ```
 
+## Day 21 | You've done it!
+
+### You've done it!
+
+[VIDEO]
+
+### Links to other resources
+
+Here are all the links I mentioned in the previous lesson 😊
+
+#### My stuff
+
+- [My Youtube channel](https://youtube.com/kevinpowell)
+- [HTML & CSS Crash Course](https://scrimba.com/course/ghtmlcss)
+- [Responsive Web Design Bootcamp](https://scrimba.com/course/gresponsive/) (premium course)
+- Follow me on [Twitter](https://twitter.com/KevinJPowell) & [Instagram](https://www.instagram.com/kevinpowell.co/)
+
+#### Other stuff
+
+- [Free CSS Course](https://cssgrid.io/) by Wes bos
+- [FrontEndMentor.io](https://www.frontendmentor.io/)
+- [FreeCodeCamp](https://www.freecodecamp.org/)
+
+#### Other fantastic YouTubers to learn from
+
+- [Brad Traversy](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) - If you're going to sub to one dev related channel, Brad's probably the right one
+- [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw) - High quality content covering HTML & CSS, Vanilla JS, React, and more
+- [DesignCourse](https://www.youtube.com/user/DesignCourse) - A nice mix of front-end and design content
+- [Program with Erik](https://www.youtube.com/channel/UCshZ3rdoCLjDYuTR_RBubzw) - Awesome Vue content
+- [Florin Pop](https://www.youtube.com/c/florinpop) - If you enjoy live streams and incredible amounts of high-quality content
+- [DevEd](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q) - Humour and high-quality dev content in one channel!
+- [Weibenfalk](https://www.youtube.com/user/Weibenfalk) - High quality JS and React content
+- [Coder Coder](https://www.youtube.com/channel/UCzNf0liwUzMN6_pixbQlMhQ) - Nice, high quality front-end videos
+- [James Q Quick](https://www.youtube.com/channel/UC-T8W79DN6PBnzomelvqJYw) - HTML, CSS, JS and more
+- [Flavio](https://www.youtube.com/user/copesc) - Good quality JS content
+- [Colt Steele](https://www.youtube.com/channel/UCrqAGUPPMOdo0jfQ6grikZw/videos) - HTML, CSS, JS 
+
+And there are so many I'm forgetting! This list could be incredibly long, so please let me know over on Discord if you have any recommendations of people that I've forgotten (including yourself if you have a channel, and sorry! lol).
+
+### Your Final Challenge
+
+This challenge reinforces everything we've looked at.
+
+Many parts of it are similar to what we've already seen, but there are a few sections that have some new twists. That said, everything in this challenge can be completed with what you've learned so far, and if you can make this page responsive, you're rocking it!
+
+#### A few considerations
+
+I've only provided a desktop version of the design (except for one section). Despite this, I want you to **take a mobile-first approach**.
+
+One of the most common reasons I hear as an excuse for writing desktop-first is that's what the design gives them. We've seen why we can still tackle things mobile-first despite that, so let's put it into practice!
+
+**The black box around the design is the viewport**. The content inside should be limited to the max-width given in the design specs, but the backgrounds should extend to the edges of the viewport no matter the size.
+
+**The PDF outlines 2 specific breakpoints to use**. You can modify them a little if you feel that it's appropriate, but you should aim for those ballparks.
+
+**Don't feel any shame in going back over previous lessons if you get stuck**. The only rule is if you do have to go back, do not copy any paste any code that you've already written, or that you downloaded from my finished versions. You just spend 3-weeks at this, don't cheat yourself! Go and watch the video, and then code it yourself. Reinforce what you learned by writing it out again!
+
+Have fun with this, and be proud of the progress that you've made!
+
+(you'll get access to the solution eventually, but it's going to be awhile. I want to make sure you take a shot at it first)
+
+### Final Challenge | Design Specs
+
+[final-challenge-specs.pdf]
+
+### The image used
+
+![the-image](./day-21/the-image.jpg)
+
+It's much bigger than you'll need at any screen size :) - a right-click and save as (or just click and drag it onto your desktop) and it's all yours!
+
 ---
+eof
+---
+
 ## Postdata
 
 Video files in m3u8 format
