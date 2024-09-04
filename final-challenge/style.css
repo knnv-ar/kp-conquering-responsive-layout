@@ -1,0 +1,52 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+}
+
+/*
+Colors
+#2E323F dark-grey
+#3B4050 mid-grey
+#6F737F light-grey
+#FFFFFF white
+#A59678 sand
+
+Fonts
+
+1 | Oswald Bold - font-size: 18px;
+
+2 | Oswald Bold - font-size: 90px;
+
+3 | Montserrat Regular - font-size: 24px;
+
+4 | Oswald Bold - font-size: 24px;
+
+5 | Oswald Bold - font-size: 30px;
+    Monserrat Regular - font-size: 18px;
+
+6 | Oswald Bold - font-size: 36px;
+    Monserrat Regular - font-size: 21px;
+
+7 | Oswald Bold - font-size: 30px;
+    Monserrat Regular - font-size: 18px;
+
+8 | Oswald Bold - font-size: 24px;
+
+9 | Oswald Bold - font-size: 21px;
+    Monserrat Regular - font-size: 16px;
+
+
+Layout and break points
+
+Maximum width of a “container” is 1200px
+
+Two breakpoints: 700px and 1000px
+
+The middle section must change as indicated below
+
+
+See small screens medium screens graphic indicator in PDF
+
+*/
