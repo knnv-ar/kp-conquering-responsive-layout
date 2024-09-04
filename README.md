@@ -2106,6 +2106,115 @@ https://youtu.be/IWFqGsXxJ1E
 
 https://codepen.io/kevinpowell/pen/zYvEKJx
 
+
+## Day 20 | Mobile navigation challenge solution
+
+### Navigation Challenge | My solution
+
+[VIDEO]
+
+```css
+.nav {
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+    font-size: 1rem;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+} 
+
+.nav__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav__list--primary {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.nav__item {
+    margin-top: 1em;
+}
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    opacity: .65;
+}
+
+.nav__link--button {
+    padding: .25em .75em;
+    background: #fff;
+    color: #136c72;
+    border-radius: 10em;
+}
+
+@media (min-width: 800px) {
+    
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        visibility: visible;
+        display: flex;
+        align-items: center;
+        height: auto;
+        position: relative;
+    }
+
+    .nav__list {
+        display: flex;
+        margin: 0;
+    }
+    
+    .nav__item {
+        margin: 0;
+    }
+    
+    .nav__list--primary {
+        margin: 0 auto;
+    }
+
+    .nav__item {
+        margin: 0 0 0 1.5em
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero__text {
+        width: 62%;
+    }
+    
+    .hero__img {
+        width: 32%;
+        align-self: flex-start;
+        margin: 0;
+    }
+
+    .primary-content {
+        width: 62%;
+    }
+
+    .sidebar {
+        width: 32%;
+    }
+}
+```
+
 ---
 ## Postdata
 
