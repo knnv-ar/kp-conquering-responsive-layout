@@ -1,8 +1,44 @@
 *, *::before, *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 :root {
+    /* Tipografías cuerpos*/
+    --fnt-oswald: "Oswald", sans-serif;
+    --fnt-montserrat: "Montserrat", sans-serif;
+    
+    /* Tipografías cuerpos*/
+    --fnt-regular: 400;
+    --fnt-bold: 700;
+
+    /* Tipografías tamanios*/
+    --fnt-16px: 1rem;
+    --fnt-18px: 1.125rem;
+    --fnt-21px: 1.3125rem;
+    --fnt-24px: 1.5rem;
+    --fnt-30px: 1.875rem;
+    --fnt-90px: 5.625rem;
+
+    /* Tipografías Playfair Display */
+    --font-playfair-display: 'Playfair Display', serif;
+
+    /* Colores */
+    --clr-ligth-grey: #2E323F;
+    --clr-mid-grey: #3B4050;
+    --clr-light-grey: #6F737F;
+    --clr-white: #FFF;
+    --clr-sand: #A59678;
+
+}
+
+body {
+    margin: 0;
+    font-family: var(--fnt-montserrat);
+    background-color: var(--clr-mid-grey);
+}
+
+img {
+    max-width: 100%;
 }
 
 /*
@@ -17,24 +53,24 @@ Fonts
 
 1 | Oswald Bold - font-size: 18px;
 
-2 | Oswald Bold - font-size: 90px;
+2 | Oswald Bold - font-size: 90px;          h1
 
 3 | Montserrat Regular - font-size: 24px;
 
 4 | Oswald Bold - font-size: 24px;
 
-5 | Oswald Bold - font-size: 30px;
+5 | Oswald Bold - font-size: 30px;          h3
     Monserrat Regular - font-size: 18px;
 
-6 | Oswald Bold - font-size: 36px;
+6 | Oswald Bold - font-size: 36px;          h2
     Monserrat Regular - font-size: 21px;
 
-7 | Oswald Bold - font-size: 30px;
+7 | Oswald Bold - font-size: 30px;          h3
     Monserrat Regular - font-size: 18px;
 
-8 | Oswald Bold - font-size: 24px;
+8 | Oswald Bold - font-size: 24px;          42px???h2
 
-9 | Oswald Bold - font-size: 21px;
+9 | Oswald Bold - font-size: 21px;          h4
     Monserrat Regular - font-size: 16px;
 
 
@@ -48,5 +84,26 @@ The middle section must change as indicated below
 
 
 See small screens medium screens graphic indicator in PDF
+
+// <uniquifier>: Use a unique and descriptive class name
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+
+.montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
 
 */
