@@ -17,13 +17,14 @@
     --fnt-21px: 1.3125rem;
     --fnt-24px: 1.5rem;
     --fnt-30px: 1.875rem;
+    --fnt-36px: 2.25rem;
     --fnt-90px: 5.625rem;
 
     /* Tipografías Playfair Display */
     --font-playfair-display: 'Playfair Display', serif;
 
     /* Colores */
-    --clr-ligth-grey: #2E323F;
+    --clr-dark-grey: #2E323F;
     --clr-mid-grey: #3B4050;
     --clr-light-grey: #6F737F;
     --clr-white: #FFF;
@@ -34,12 +35,96 @@
 body {
     margin: 0;
     font-family: var(--fnt-montserrat);
-    background-color: var(--clr-mid-grey);
+    background-color: var(--clr-white);
+    line-height: 1.6;
 }
 
 img {
     max-width: 100%;
 }
+
+h1 {
+    font-family: var(--fnt-oswald);
+    font-size: var(--fnt-90px);
+    font-weight: var(--fnt-bold);
+    color: var(--clr-light-grey);
+    line-height: 1.1;
+}
+
+h1 span {
+    color: var(--clr-sand);
+    
+}
+
+
+.logo {
+    color: red;
+}
+
+.nav-bar {
+    background-color: var(--clr-dark-grey);
+}
+
+.navigation li {
+    font-family: var(--fnt-oswald);
+    font-size: var(--fnt-18px);
+    font-weight: var(--fnt-bold);
+    color: var(--clr-light-grey);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.section-one {
+    background-color: var(--clr-mid-grey);
+}
+
+.section-one p {
+    font-family: var(--fnt-montserrat);
+    font-size: var(--fnt-24px);
+    font-weight: var(--fnt-regular);
+    color: var(--clr-light-grey);
+}
+
+.section-two {
+    background-color: var(--clr-light-grey);
+}
+
+.section-two h3 {
+    font-family: var(--fnt-oswald);
+    font-size: var(--fnt-30px);
+    font-weight: var(--fnt-bold);
+    color: var(--clr-sand);
+}
+
+.section-two p {
+    font-family: var(--fnt-montserrat);
+    font-size: var(--fnt-18px);
+    font-weight: var(--fnt-regular);
+    color: var(--clr-mid-grey);
+}
+
+.section-three {
+    background-color: var(--clr-white);
+}
+
+.section-three h2 {
+    font-family: var(--fnt-oswald);
+    font-size: var(--fnt-36px);
+    font-weight: var(--fnt-bold);
+    color: var(--clr-sand);
+}
+
+.section-three p {
+    font-family: var(--fnt-montserrat);
+    font-size: var(--fnt-21px);
+    font-weight: var(--fnt-regular);
+    color: var(--clr-mid-grey);
+}
+
+.section-four {
+    background-color: var(--clr-mid-grey);
+}
+
 
 /*
 Colors
