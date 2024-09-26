@@ -2178,16 +2178,12 @@ https://codepen.io/kevinpowell/pen/zYvEKJx
         margin: 0;
     }
     
-    .nav__item {
-        margin: 0;
-    }
-    
     .nav__list--primary {
         margin: 0 auto;
     }
 
     .nav__item {
-        margin: 0 0 0 1.5em
+        margin: 0 0 0 1.5em;
     }
     
     .row {
